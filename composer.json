@@ -1,6 +1,6 @@
 {
 
-  "name": "serps/http-client-phantomjs",
+  "name": "hundt/http-client-phantomjs",
   "description": "PhantomJS client for SERPS",
   "type": "library",
   "keywords": ["SERPS", "HTTP Client", "PhantomJS"],

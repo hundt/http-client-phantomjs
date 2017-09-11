@@ -80,8 +80,9 @@ page.onResourceReceived = function (resource) {
 };
 
 page.onError = function (msg, trace) {
-    console.error('Error: ' + msg);
-    phantom.exit(1);
+    // Ignore errors because we are getting one every time we load a results page.
+    // console.error('Error: ' + msg);
+    // phantom.exit(1);
 };
 
 page.viewportsize = inputData.viewportsize || {width: 1680, height: 1050};

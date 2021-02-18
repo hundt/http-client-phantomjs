@@ -121,7 +121,7 @@ class PhantomJsClient implements HttpClientInterface
         $commandOptions = implode(' ', $commandOptions);
         $commandArg = json_encode($commandArg);
 
-        $process = new Process("$this->phantomJS $commandOptions $scriptFile '$commandArg'");
+        $process = new Process([$this->phantomJS, $commandOptions, $scriptFile, $commandArg]);
         $process->run();
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
